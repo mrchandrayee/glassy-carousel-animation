@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16082b">
+  <title>Glassy Carousel Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Glassy Carousel Animation</h1>
+
+    <section class="carousel-stage" aria-label="Glassy image carousel">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <button class="glass-card" data-index="0" aria-label="Show mountain lake">
+            <img src="assets/mountain-lake.svg" alt="Mountain lake at sunrise">
+          </button>
+          <button class="glass-card" data-index="1" aria-label="Show misty mountains">
+            <img src="assets/misty-mountain.svg" alt="Misty mountain landscape">
+          </button>
+          <button class="glass-card" data-index="2" aria-label="Show forest river">
+            <img src="assets/forest-river.svg" alt="Forest and river">
+          </button>
+          <button class="glass-card active" data-index="3" aria-label="Show sunset skater">
+            <img src="assets/sunset-skater.svg" alt="Silhouette jumping at sunset">
+          </button>
+          <button class="glass-card" data-index="4" aria-label="Show ocean cliffs">
+            <img src="assets/ocean-cliffs.svg" alt="Ocean cliffs">
+          </button>
+          <button class="glass-card" data-index="5" aria-label="Show desert dusk">
+            <img src="assets/desert-dusk.svg" alt="Desert dunes at dusk">
+          </button>
+          <button class="glass-card" data-index="6" aria-label="Show snowy peaks">
+            <img src="assets/snowy-peaks.svg" alt="Snowy mountain peaks">
+          </button>
+        </div>
+      </div>
+
+      <button class="carousel-arrow previous" id="previous" type="button" aria-label="Previous image">
+        <span aria-hidden="true">‹</span>
+      </button>
+      <button class="carousel-arrow next" id="next" type="button" aria-label="Next image">
+        <span aria-hidden="true">›</span>
+      </button>
+      <div class="carousel-caption" id="carouselCaption">Sunset Skater</div>
+      <div class="carousel-dots" id="carouselDots" aria-label="Choose slide">
+        <button class="dot" data-index="0" aria-label="Slide 1"></button>
+        <button class="dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="dot active" data-index="3" aria-label="Slide 4"></button>
+        <button class="dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="dot" data-index="5" aria-label="Slide 6"></button>
+        <button class="dot" data-index="6" aria-label="Slide 7"></button>
+      </div>
+    </section>
+
+    <div class="comment-chip">Comment "Carousel" for code</div>
+
+    <section class="source-panel" aria-label="CSS source shown in the video">
+      <div class="source-heading">Visible CSS from the video</div>
+      <pre><code><span class="selector">.glass-card</span> {
+  position: absolute;
+  top: 0; left: 0; padding: 12px;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.6s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+<span class="selector">.glass-card img</span> {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 14px; pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}</code></pre>
+      <p class="source-note">The complete carousel layout and interaction logic are included in the project files.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
